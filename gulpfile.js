@@ -22,6 +22,7 @@ gulp.task("styles", function () {
 gulp.task("watch", function () {
   browserSync.init({
     server: "./",
+    browser: "chrome.exe"
   });
 
   gulp.watch("./scss/**/*.scss", gulp.series("styles"));
