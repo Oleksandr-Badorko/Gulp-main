@@ -3,6 +3,7 @@ const sass = require("gulp-sass")(require("sass"));
 const browserSync = require("browser-sync").create();
 const cleanCSS = require("gulp-clean-css");
 const sourcemaps = require("gulp-sourcemaps");
+const autoprefixer = require("gulp-autoprefixer");
 
 gulp.task("styles", function () {
   return (
@@ -10,6 +11,7 @@ gulp.task("styles", function () {
       .src("./scss/styles.scss")
       .pipe(sourcemaps.init())
       .pipe(sass().on("error", sass.logError))
+      .pipe(autoprefixer())
       .pipe(cleanCSS({ compatibility: "ie8" }))
       .pipe(sourcemaps.write())
       .pipe(gulp.dest("./css"))
