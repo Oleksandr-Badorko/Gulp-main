@@ -19,12 +19,6 @@ a:focus,
 a:active {
   outline: none;
 }
-nav,
-footer,
-header,
-aside {
-  display: block;
-}
 html,
 body {
   height: 100%;
@@ -110,5 +104,9 @@ button {
   scroll-behavior:smooth;
 }
 
-
+img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
 
